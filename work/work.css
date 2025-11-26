@@ -1,0 +1,325 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a2a, #1a1a4a, #000033);
+    color: #e6f0ff;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.text {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 40px;
+    background: rgba(20, 20, 50, 0.9);
+    border-radius: 15px;
+    border: 1px solid rgba(100, 150, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    color: #4a90ff;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #4a90ff;
+    padding-bottom: 15px;
+}
+
+.text p {
+    font-size: 1.1rem;
+    color: #e6f0ff;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.text h3 {
+    font-size: 2rem;
+    color: #66b3ff;
+    margin: 30px 0 20px;
+    text-align: center;
+}
+
+.text ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.text li {
+    background: rgba(74, 144, 255, 0.1);
+    margin: 12px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4a90ff;
+    color: #e6f0ff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.text li:hover {
+    background: rgba(74, 144, 255, 0.2);
+    transform: translateX(10px);
+    border-left-color: #66b3ff;
+}
+
+.photo-gallery {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.photo-card {
+    background: rgba(20, 20, 50, 0.9);
+    border-radius: 15px;
+    border: 1px solid rgba(100, 150, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px);
+    border-color: #4a90ff;
+    box-shadow: 0 15px 35px rgba(74, 144, 255, 0.2);
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.photo-card:hover .photo-container img {
+    transform: scale(1.05);
+}
+
+.caption-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 10, 30, 0.9));
+    padding: 20px;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.photo-card:hover .caption-overlay {
+    transform: translateY(0);
+}
+
+.caption-overlay p {
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.photo-content {
+    padding: 25px;
+}
+
+.photo-content p {
+    color: #e6f0ff;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+}
+
+.conclusion {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(20, 20, 50, 0.9);
+    border-radius: 15px;
+    border: 1px solid rgba(100, 150, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.conclusion h2 {
+    font-size: 2.5rem;
+    color: #4a90ff;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4a90ff;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.conclusion p {
+    font-size: 1.2rem;
+    color: #e6f0ff;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#next {
+    display: block;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #4a90ff, #0066cc);
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(74, 144, 255, 0.4);
+}
+
+#next:hover {
+    background: linear-gradient(135deg, #66aaff, #0077dd);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 144, 255, 0.6);
+}
+
+#next a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .text, .conclusion {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .text h2, .conclusion h2 {
+        font-size: 2rem;
+    }
+    
+    .text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .text p, .text li, .photo-content p, .conclusion p {
+        font-size: 1rem;
+    }
+    
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .photo-container {
+        height: 200px;
+    }
+    
+    .photo-content {
+        padding: 20px;
+    }
+    
+    #next {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text, .conclusion {
+        padding: 20px 15px;
+    }
+    
+    .text h2, .conclusion h2 {
+        font-size: 1.8rem;
+    }
+    
+    .text h3 {
+        font-size: 1.4rem;
+    }
+    
+    .photo-gallery {
+        gap: 15px;
+    }
+    
+    .photo-container {
+        height: 180px;
+    }
+    
+    .photo-content {
+        padding: 15px;
+    }
+    
+    .caption-overlay {
+        padding: 15px;
+    }
+    
+    .caption-overlay p {
+        font-size: 0.8rem;
+    }
+    
+    #next {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text, .photo-card, .conclusion {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.photo-card:nth-child(2) { animation-delay: 0.1s; }
+.photo-card:nth-child(3) { animation-delay: 0.2s; }
+.photo-card:nth-child(4) { animation-delay: 0.3s; }
+.photo-card:nth-child(5) { animation-delay: 0.4s; }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(20, 20, 50, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4a90ff, #0066cc);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #66aaff, #0077dd);
+}

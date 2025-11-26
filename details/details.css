@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a2a, #1a1a4a, #000033);
+    color: #e6f0ff;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.details h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(74, 144, 255, 0.5);
+    background: linear-gradient(135deg, #4a90ff, #66b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.details > p {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #b3e0ff;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    line-height: 1.8;
+}
+
+.details > p strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.meta1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.item, .item1, .item2, .item3 {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(20, 20, 50, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(100, 150, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.item:hover, .item1:hover, .item2:hover, .item3:hover {
+    transform: translateY(-5px);
+    border-color: #4a90ff;
+    box-shadow: 0 12px 35px rgba(74, 144, 255, 0.2);
+}
+
+.item3 {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.item strong, .item1 strong, .item2 strong, .item3 strong {
+    color: #4a90ff;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.item, .item1, .item2, .item3 {
+    color: #e6f0ff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.intro {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(20, 20, 50, 0.9);
+    border-radius: 15px;
+    border: 1px solid rgba(100, 150, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #4a90ff;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #4a90ff;
+    padding-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #e6f0ff;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.intro p strong {
+    color: #99ccff;
+    font-weight: 600;
+}
+
+.next {
+    text-align: center;
+    margin: 50px auto;
+}
+
+#next {
+    background: linear-gradient(135deg, #4a90ff, #0066cc);
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(74, 144, 255, 0.4);
+}
+
+#next:hover {
+    background: linear-gradient(135deg, #66aaff, #0077dd);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 144, 255, 0.6);
+}
+
+#next a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .details {
+        padding: 20px 15px;
+    }
+    
+    .details h1 {
+        font-size: 2.2rem;
+    }
+    
+    .details > p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    .meta, .meta1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .item, .item1, .item2, .item3 {
+        min-width: 100%;
+    }
+    
+    .intro {
+        margin: 30px auto;
+        padding: 25px 20px;
+    }
+    
+    .intro h1 {
+        font-size: 2rem;
+    }
+    
+    .intro p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    #next {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .details h1 {
+        font-size: 1.8rem;
+    }
+    
+    .details > p {
+        font-size: 1rem;
+    }
+    
+    .intro {
+        padding: 20px 15px;
+    }
+    
+    .intro h1 {
+        font-size: 1.6rem;
+    }
+    
+    .item, .item1, .item2, .item3 {
+        padding: 15px;
+    }
+    
+    .item strong, .item1 strong, .item2 strong, .item3 strong {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details, .intro {
+    animation: fadeInUp 0.8s ease-out;
+}
